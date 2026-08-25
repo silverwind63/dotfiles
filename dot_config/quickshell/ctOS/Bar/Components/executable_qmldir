@@ -1,0 +1,12 @@
+module Components
+
+SystemLabel 1.0 SystemLabel.qml
+Workspace 1.0 Workspace.qml
+CornerFrame 1.0 CornerFrame.qml
+Divider 1.0 Divider.qml
+Workspaces 1.0 Workspaces.qml
+CPU 1.0 CPU.qml
+Memory 1.0 Memory.qml
+Time 1.0 Time.qml
+Battery 1.0 Battery.qml
+Net 1.0 Net.qml

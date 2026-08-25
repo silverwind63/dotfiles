@@ -1,0 +1,6 @@
+theme = Everforest Dark Hard
+font-family = Ioskeley Mono Term
+font-size = 13
+cursor-style = block
+shell-integration-features = no-cursor
+gtk-single-instance = false

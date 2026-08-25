@@ -1,0 +1,73 @@
+{
+  "modules-left": [
+    "mango/workspaces"
+  ],
+  "modules-center": [
+    "mango/layout"
+  ],
+  "modules-right": [
+    "battery",
+    //"custom/sep",
+    //"network",
+    "cpu",
+    "memory",
+    "clock"
+  ],
+  "mango/workspaces": {
+      "format": "{icon}",
+      "hide-empty": true,
+      "on-click": "activate",
+      "on-click-right": "toggle",
+      "overview-label": "OVERVIEW"
+  },
+  "mango/keymode": {
+  	"format": "{}"
+  	// "format-default": " Default",
+    // "format-test": " Test",
+  },
+  "mango/window": {
+    "format": "<span background=\"#d699b6\" foreground=\"#1e2326\"> {} </span>",
+	  "icon-size": 20,
+    "expand": true
+  },
+  "mango/layout": {
+    "format": "<span background=\"#83c092\" foreground=\"#1e2326\"> {} </span>",
+    "format-M": "<span background=\"#83c092\" foreground=\"#1e2326\">  </span>",
+    "format-G": "<span background=\"#83c092\" foreground=\"#1e2326\"> 󰝘 </span>",
+    "format-T": "<span background=\"#83c092\" foreground=\"#1e2326\">  </span>"
+  },
+  "battery": {
+    "states": {
+      "charged": 100,
+      "uncharged": 99
+    },
+    "format": "<span background=\"#d699b6\" foreground=\"#1e2326\"> 󰁹 </span> {capacity}%",
+    "format-plugged": "<span background=\"#e67e80\" foreground=\"#1e2326\"> 󰚥 </span> {capacity}%"
+  },
+  "network": {
+    "format-wifi": "Online",
+    "format-disconnected": "Disconnected ⚠"
+  },
+  "clock": {
+    "format": "<span background=\"#7fbbb3\" foreground=\"#1e2326\">  </span> {:%H:%M:%S} ",
+    "format-alt": "<span background=\"#7fbbb3\" foreground=\"#1e2326\">  </span> {:%Y-%m-%d} ",
+
+    "tooltip": false,
+    "interval": 1
+  },
+  "cpu": {
+    "format": "<span background=\"#a7c080\" foreground=\"#1e2326\"> 󰘚 </span> {usage}%",
+    "tooltip": false,
+    "interval": 1
+  },
+  "memory": {
+    "format": "<span background=\"#dbbc7f\" foreground=\"#1e2326\">  </span> {used:0.1f}GB",
+
+    "tooltip": false,
+    "interval": 1
+  },
+  "custom/sep": {
+    "format": "|",
+    "interval": 0
+  }
+}

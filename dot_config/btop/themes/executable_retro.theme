@@ -1,0 +1,93 @@
+# Btop everforest dark hard theme by u/archontop.
+
+# All graphs and meters can be gradients
+# For single color graphs leave "mid" and "end" variable empty.
+# Use "start" and "end" variables for two color gradient
+# Use "start", "mid" and "end" for three color gradient
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#292523"
+
+# Main text color
+theme[main_fg]="#d3c5aa"
+
+# Title color for boxes
+theme[title]="#d3c5aa"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#ad5e4f"
+
+# Background color of selected items
+theme[selected_bg]="#4b565c"
+
+# Foreground color of selected items
+theme[selected_fg]="#f1cba2"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#2b3339"  
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#d3c5aa"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#6f8570"
+
+# Cpu box outline color
+theme[cpu_box]="#3c3c3d"
+
+# Memory/disks box outline color
+theme[mem_box]="#3c3c3d"
+
+# Net up/down box outline color
+theme[net_box]="#3c3c3d"
+
+# Processes box outline color
+theme[proc_box]="#3c3c3d"
+
+# Box divider line and small boxes line color
+theme[div_line]="#3c3c3d"
+
+# Temperature graph colors
+theme[temp_start]="#f1cba2"
+theme[temp_mid]="#c98a7b"
+theme[temp_end]="#ad5e4f"
+
+# CPU graph colors
+theme[cpu_start]="#c98a7b"
+theme[cpu_mid]="#f1cba2"
+theme[cpu_end]="#89936b"
+
+# Mem/Disk free meter
+theme[free_start]="#ad5e4f"
+theme[free_mid]="#c98a7b"
+theme[free_end]="#f1cba2"
+
+# Mem/Disk cached meter
+theme[cached_start]="#87a5a6"
+theme[cached_mid]="#6c9b92"
+theme[cached_end]="#6f8570"
+
+# Mem/Disk available meter
+theme[available_start]="#ad5e4f"
+theme[available_mid]="#f1cba2"
+theme[available_end]="#6f8570"
+
+# Mem/Disk used meter
+theme[used_start]="#6f8570"
+theme[used_mid]="#f1cba2"
+theme[used_end]="#ad5e4f"
+
+# Download graph colors
+theme[download_start]="#46534b"
+theme[download_mid]="#5c8d7e"
+theme[download_end]="#6f8570"
+
+# Upload graph colors
+theme[upload_start]="#ad5e4f"
+theme[upload_mid]="#f1cba2"
+theme[upload_end]="#6f8570"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#6f8570"
+theme[process_mid]="#ad5e4f"
+theme[process_end]="#9f4025"

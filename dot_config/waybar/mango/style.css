@@ -1,0 +1,88 @@
+@define-color bg    #1e2326; 
+@define-color fg    #d3c6aa; 
+@define-color blk   #1e2326; 
+@define-color red   #e67e80; 
+@define-color grn   #a7c080; 
+@define-color ylw   #dbbc7f; 
+@define-color blu   #7fbbb3; 
+@define-color mag   #d699b6; 
+@define-color cyn   #83c092; 
+@define-color brblk #7a8478; 
+@define-color grey #859289; 
+@define-color white #ffffff; 
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0px
+}
+#workspaces button {
+    padding: 0px;
+    color: @grey;
+    background: transparent;
+    border-radius: 0px
+}
+
+#workspaces button.active {
+    color: @bg;
+    background: @fg;
+    border-radius: 0px
+}
+
+#workspaces button.empty {
+    color: @grey;
+    background: transparent;
+    border-radius: 0px
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+#workspaces button.overview{
+    color: @cyn;
+    border-radius: 0px;
+}
+
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#network,
+#tray {
+    padding: 0 8px;
+    color: @white;
+}
+
+#custom-sep {
+    color: @fg;
+}
+
+#clock {
+    color: @fg;
+}
+
+#battery {
+    color: @fg;
+}
+
+#memory {
+    color: @fg;
+}
+
+#cpu {
+    color: @fg;
+}
+
+#network {
+    color: @fg;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#tray {
+    background-color: @brblk;
+}

@@ -1,0 +1,127 @@
+pragma ComponentBehavior: Bound
+
+import QtQuick
+import qs.Common
+import Qt5Compat.GraphicalEffects
+
+Item {
+    id: root
+
+    property color color: Theme.ctosGray
+    property int length: 10
+    property real thickness: 1
+    property real frameOpacity: 1
+    property int frameSize: 16
+
+    property int count: 0
+
+    default property alias content: contentArea.data
+
+    onCountChanged: {
+        if (count > 4 || count < 0) {
+            throw new Error(`CornerFrame.count: must be between 0 - 4, received: ${count}`);
+        }
+    }
+
+    component CornerFrameImage: Image {
+        id: cornerFrame
+        source: "../Resources/corner-frame.svg"
+        antialiasing: false
+        smooth: false
+        sourceSize.width: root.frameSize
+        sourceSize.height: root.frameSize
+        opacity: root.frameOpacity
+    }
+
+    component CornerSquareImage: Image {
+        source: "../Resources/corner-square.svg"
+        antialiasing: false
+        smooth: false
+        opacity: root.frameOpacity
+    }
+    ColorOverlay {
+        anchors.fill: cornerFrame
+        source: cornerFrame
+        color: "#ffffffff"
+    }
+
+    Item {
+        id: contentArea
+        anchors.fill: parent
+
+        // SECTION Top Left
+        CornerFrameImage {
+            id: topleft
+            anchors {
+                top: contentArea.top
+                left: contentArea.left
+            }
+        }
+        Loader {
+            active: root.count >= 3
+
+            anchors {
+                top: contentArea.top
+                left: contentArea.left
+            }
+            sourceComponent: CornerSquareImage {}
+        }
+
+        // SECTION Top Right
+        CornerFrameImage {
+            id: topright
+            anchors {
+                right: contentArea.right
+                top: contentArea.top
+            }
+            rotation: 90
+        }
+        Loader {
+            active: root.count >= 4
+            anchors {
+                top: contentArea.top
+                right: contentArea.right
+            }
+
+            sourceComponent: CornerSquareImage {}
+        }
+
+        // SECTION Bottom Right
+        CornerFrameImage {
+            id: bottomright
+            anchors {
+                bottom: contentArea.bottom
+                right: contentArea.right
+            }
+            rotation: 180
+        }
+        Loader {
+            active: root.count >= 2
+            anchors {
+                bottom: contentArea.bottom
+                right: contentArea.right
+            }
+
+            sourceComponent: CornerSquareImage {}
+        }
+
+        // SECTION Bottom Left
+        CornerFrameImage {
+            id: bottomleft
+            anchors {
+                bottom: contentArea.bottom
+                left: contentArea.left
+            }
+            rotation: 270
+        }
+        Loader {
+            active: root.count >= 1
+            anchors {
+                bottom: contentArea.bottom
+                left: contentArea.left
+            }
+
+            sourceComponent: CornerSquareImage {}
+        }
+    }
+}
