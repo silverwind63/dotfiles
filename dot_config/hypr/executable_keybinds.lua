@@ -40,7 +40,7 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 
 -- Swap column to left or right
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "l" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "r"}))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "r" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "d" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "u" }))
 
@@ -81,9 +81,8 @@ hl.bind(mainMod .. " + CTRL + Tab", function()
 	hl.dispatch(hl.dsp.window.move({ workspace = workspaceID }))
 end)
 
--- Example special workspace (scratchpad)
--- hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
--- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+-- Enable Group
+hl.bind(mainMod .. " + G", hl.dsp.group.toggle())
 
 -- Cycle through existing workspaces
 hl.bind(mainMod .. " + CTRL + A", hl.dsp.focus({ workspace = "m-1" }))

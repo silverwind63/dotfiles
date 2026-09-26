@@ -8,9 +8,9 @@
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-	-- hl.exec_cmd("quickshell -p ~/.config/quickshell/Everforest/shell.qml")
+	hl.exec_cmd("waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css")
 	hl.exec_cmd("awww-daemon")
-	-- hl.exec_cmd("dunst")
+	hl.exec_cmd("dunst")
 	hl.exec_cmd("wl-paste --type text image --watch cliphist store")
 	hl.exec_cmd("mpd")
 	hl.exec_cmd("fcitx5")
