@@ -30,7 +30,7 @@ autoload -Uz compinit && compinit
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # History
-HISTSIZE=5000
+HISTSIZE=10000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -62,25 +62,11 @@ alias lc='ls -ltcrh'              # sort by change time
 alias lu='ls -lturh'              # sort by access time
 alias lf="ls -l | grep -Ev '^d'"  # files only
 alias ldir="ls -l | grep -E '^d'" # directories only
-alias ping='ping -c 3'
-
-# Change directory aliases
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 
 # Alias for frequently use app
 alias ya="yazi"
-alias nc="ncmpcpp"
 alias vi="nvim"
 alias hy="start-hyprland"
-
-# suffix aliases
-alias -s md="bat"
-alias -s mov="mpv"
-alias -s mp4="mpv"
-alias -s c="nvim"
-alias -s js="nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -102,11 +88,7 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
-# Undo the last action
-
 # magic space 
 bindkey ' ' magic-space
-#any-nix-shell zsh --info-right | source /dev/stdin
 
 PATH="$PATH:$HOME/Applications"
-
