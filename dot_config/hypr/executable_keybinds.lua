@@ -39,8 +39,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action
 hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 
 -- Swap column to left or right
-hl.bind(mainMod .. " + H", hl.dsp.window.resize({ x = -500, y = 100 }))
-hl.bind(mainMod .. " + L", hl.dsp.window.resize({ x = 500, y = 100 }))
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "l" }))
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "r"}))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "d" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "u" }))
 
@@ -92,3 +92,12 @@ hl.bind(mainMod .. " + CTRL + S", hl.dsp.focus({ workspace = "m+1" }))
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Change Layout
+hl.bind(mainMod .. " + N", function()
+	if hl.get_config("general.layout") == "master" then
+		hl.config({ general = { layout = "monocle" } })
+	else
+		hl.config({ general = { layout = "master" } })
+	end
+end)
